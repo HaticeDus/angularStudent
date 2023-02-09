@@ -1,0 +1,68 @@
+<h1 style="margin: 20px;">Students list</h1>
+
+
+<div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="studentList">
+
+        <!-- id Column -->
+        <ng-container matColumnDef="id" sticky>
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let item"> {{item.id}} </td>
+        </ng-container>
+
+        <!-- ad Column -->
+        <ng-container matColumnDef="ad">
+            <th mat-header-cell *matHeaderCellDef> AD </th>
+            <td mat-cell *matCellDef="let item"> {{item.ad}} </td>
+        </ng-container>
+
+        <!-- soyad Column -->
+        <ng-container matColumnDef="soyad">
+            <th mat-header-cell *matHeaderCellDef> SOYAD </th>
+            <td mat-cell *matCellDef="let item"> {{item.soyad}} </td>
+        </ng-container>
+
+        <!-- tel Column -->
+        <ng-container matColumnDef="tel">
+            <th mat-header-cell *matHeaderCellDef> TELEFON </th>
+            <td mat-cell *matCellDef="let item"> {{item.tel}} </td>
+        </ng-container>
+
+        <!-- cinsiyet Column -->
+        <ng-container matColumnDef="cinsiyet">
+            <th mat-header-cell *matHeaderCellDef> CİNSİYET </th>
+            <td mat-cell *matCellDef="let item"> {{item.cinsiyet}} </td>
+        </ng-container>
+
+        <!-- email Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> EMAİL </th>
+            <td mat-cell *matCellDef="let item"> {{item.email}} </td>
+        </ng-container>
+
+        <!-- delete Column -->
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> DELETE </th>
+            <td mat-cell *matCellDef="let item"> <button mat-icon-button color="warn" (click)="deleteStudent(item.id)">
+                    <mat-icon>
+                        delete
+                    </mat-icon>
+                </button></td>
+        </ng-container>
+
+        <!-- update Column -->
+        <ng-container matColumnDef="update">
+            <th mat-header-cell *matHeaderCellDef> UPDATE </th>
+            <td mat-cell *matCellDef="let item">
+                <button mat-icon-button color="primary" (click)="openDialog(item)">
+                    <mat-icon>
+                        edit
+                    </mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

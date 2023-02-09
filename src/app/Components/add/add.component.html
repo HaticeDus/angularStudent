@@ -1,0 +1,48 @@
+<h1> Add New Student</h1>
+
+<div mat-dialog-content>
+
+    <form [formGroup]="studentForm">
+        <mat-form-field appearance="outline" style="margin-top: 10px;">
+            <mat-label>Ad</mat-label>
+            <input formControlName="ad" matInput placeholder="enter student name">
+            <mat-icon matSuffix>info</mat-icon>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Soyad</mat-label>
+            <input formControlName="soyad" matInput placeholder="enter student surname">
+            <mat-icon matSuffix>info</mat-icon>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefon</mat-label>
+            <input formControlName="tel" matInput placeholder="enter student phone number">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Cinsiyet</mat-label>
+            <mat-select formControlName="cinsiyet">
+                <mat-option value="kadin">Kadin</mat-option>
+                <mat-option value="erkek">Erkek</mat-option>
+            </mat-select>
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="enter student's email ">
+            <mat-icon matSuffix>mail</mat-icon>
+            <mat-hint></mat-hint>
+        </mat-form-field>
+    </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="primary" (click)="addStudent()">save</button>
+</div>
+
