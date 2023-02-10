@@ -1,26 +1,21 @@
 .exampla-spacer{
   flex: 1 1 auto;
 }
-
 mat-form-field{
   font-size: 14px;
   width: 60%;
   margin-left: 300px;
   margin-right: 300px;
 }
-
 body{
  
   margin-bottom: 800px;
   
 }
-
-
 .mdc-button {
   margin-right: 0px;
   margin-left: 1386px;
 }
-
 h1{
   margin-top: 5%;
   margin-left: 15.6%;
